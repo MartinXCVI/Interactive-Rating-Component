@@ -1,0 +1,328 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(216, 12%, 8%); /*--Very dark blue--*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/*--------------------Google Fonts----------------------------------------------*/
+
+/*-- font-family: 'Overpass', sans-serif; (Weight: 400, 700)--*/
+
+/*------------------------------------------------------------------------------*/
+
+/*------------------------------GENERAL CSS-------------------------------------*/
+
+header {
+    background-color: hsl(179, 100%, 0%);
+}
+
+header h1 {
+    color: hsl(25, 97%, 53%);
+}
+
+#form, .rating-section {
+    background-image: linear-gradient(to top right,
+                    hsl(179, 100%, 2%), hsl(216, 12%, 8%), hsl(179, 100%, 2%),
+                    hsl(179, 100%, 2%), hsl(216, 12%, 8%), hsl(179, 100%, 2%));
+    background-size: 500%;
+    background-position: left;
+    transition: background-position 1s;
+}
+
+#form:hover, .rating-section:hover {
+    background-position: right;
+}
+
+/*------------------------------------------------------------------------------*/
+
+/*----------------------375px-------------------------*/
+
+@media all and (min-width: 375px) {
+
+    header {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+    }
+
+    header h1 {
+        text-align: center;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 700;
+    }
+
+    #principal {
+        width: 100%;
+        height: 80.5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+/*----------------Formulary--------------------*/
+    .star-icon-fig, .field, .numfield, .btn-div, #form p {
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;
+    }
+
+    .star-icon-fig img {
+        padding: 1em;
+        background-color: hsl(216, 12%, 25%);
+        border-radius: 50%;
+    }
+
+    .star-icon-fig img:hover {
+        background-color: hsl(216, 12%, 8%);
+        transition-duration: 0.5s;
+    }
+
+    #form {
+        background-color: hsl(213, 19%, 18%);
+        width: 80%;
+        padding: 1em;
+        border-radius: 1em;
+        margin-bottom: 1em;
+    }
+
+    .field legend, .field p {
+        font-family: 'Overpass', sans-serif;
+    }
+
+    .field legend {
+        font-weight: 700;
+        color:hsl(0, 0%, 90%);
+    }
+
+    .field p {
+        font-weight: 400;
+        color: hsl(217, 12%, 60%);
+    }
+
+    .numfield {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1.5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .numbers {
+        width: 3em;
+        height: 3em;
+        text-align: center;
+        background-color: hsl(216, 12%, 25%);
+        border-radius: 50%;
+        color: hsl(217, 12%, 63%);
+        cursor: pointer;
+    }
+
+    .numbers:hover {
+        background-color: hsl(216, 12%, 8%);
+        color: hsl(0, 0%, 90%);
+        transition-duration: 0.5s;
+    }
+
+    .numbers:focus {
+        background-color: hsl(25, 97%, 53%);
+        color: hsl(0, 0%, 90%);
+        box-shadow: 0em 0.4em 0.2em hsl(216, 12%, 8%);
+    }
+
+    .btn-div {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Btn {
+        width: 100%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-color: hsl(25, 97%, 53%);
+        border-radius: 2em;
+        color: hsl(0, 0%, 90%);
+        font-family: 'Overpass', sans-serif;
+        font-weight: 700;
+        font-size: 1.1em;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+    }
+
+    #Btn:hover {
+        background-color: hsl(0, 0%, 90%);
+        color: hsl(25, 97%, 53%);
+        transition-duration: 0.5s;
+    }
+
+/*--------------------------------------*/
+
+/*--------Illustration Section----------*/
+
+    .to-hidde {
+        display: none !important;  /*------Hidding the rating section-----*/
+    }
+
+    .rating-section {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        padding-top: 1.5em;
+        border-radius: 1em;
+        margin-bottom: 1em;
+        background-color: hsl(213, 19%, 18%);
+    }
+
+    .rating-section h2 , .rating-section p {
+        text-align: center;
+    }
+
+    .chosen-num-para {
+        color: hsl(25, 97%, 53%);
+        padding: 1em;
+        background-color: hsl(216, 12%, 25%);
+        border-radius: 2em;
+        margin-bottom: 1.5em;
+    }
+
+    .thanks-message {
+        color: hsl(217, 12%, 60%)
+    }
+
+    .chosen-num-para, .thanks-message {
+        font-family: 'Overpass', sans-serif;
+        font-weight: 400;
+    }
+
+    .rating-section h2 {
+        color: hsl(0, 0%, 90%);
+        font-family: 'Overpass', sans-serif;
+        font-weight: 700;
+    }
+
+    .rating-section, .illustration-figure, .rating-section h2, .thanks-message {
+        margin-bottom: 1em;
+    }
+
+/*--------------------------------------*/
+
+/*---------------FOOTER-----------------*/
+
+    #footer {
+        background-color: hsl(179, 100%, 0%);
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    #footer p {
+        color: hsl(217, 12%, 63%);
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    #footer p a {
+        text-decoration: none;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 400;
+        color:hsl(25, 97%, 53%);
+    }
+
+    #footer p a:hover {
+        text-decoration: underline;
+    }
+
+    #footer p a:focus {
+        color: hsl(0, 0%, 90%);
+    }
+
+/*--------------------------------------*/
+
+}
+
+/*--------------------END: 375px-----------------------*/
+
+/*----------------------768px--------------------------*/
+
+@media all and (min-width: 768px) {
+
+    #principal {
+        height: 85.5vh;
+    }
+
+    #form, .rating-section {
+        width: 50%;
+    }
+
+    .form-title h2, .rating-section h2 {
+        font-size: 2em;
+    }
+
+    .field p, .rating-section p {
+        font-size: 1.05em;
+    }
+
+    #Btn {
+        font-size: 1.2em;
+    }
+
+}
+
+/*--------------------END: 768px-----------------------*/
+
+/*----------------------1024px-------------------------*/
+
+@media all and (min-width: 1024px) {
+
+    #principal {
+        height: 90.4vh;
+    }
+
+    #form, .rating-section {
+        width: 35%;
+        padding: 1.5em;
+    }
+
+}
+
+/*--------------------END: 1024px----------------------*/
+
+/*----------------------1366px-------------------------*/
+
+@media all and (min-width: 1366px) {
+
+    #form, .rating-section {
+        width: 25%;
+    }
+
+}
+
+/*---------------------END: 1366p----------------------*/
+
+/*----------------------1440px-------------------------*/
+
+@media all and (min-width: 1440px) {
+
+    #principal {
+        height: 91.5vh;
+    }
+
+    #form, .rating-section {
+        width: 20%;
+    }
+
+}
+
+/*--------------------END: 1440px----------------------*/
